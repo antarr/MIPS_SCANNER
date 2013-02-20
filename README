@@ -1,0 +1,29 @@
+In this project we will validate the syntax of a few MIPS instructions. 
+In later assignments we will expand the instruction repertoire. 
+
+The instructions are: add, addi, beq, j, and the definition and use of labels.  
+More info on the sytax of these instructions is in Appendix B of your textbook.
+You should check for validity of register names and the size of immediate operands in the context of the instruction.
+Labels can be alphanumeric upto 16 characters long.  A label by itself followed by a colon is a valid statement.
+
+Example run:
+Please enter a MIPS statement: abc:
+label: abc
+
+Please enter a MIPS statement: beq $s1, $s2, abcxyz
+operator: beq
+op1: register $s1
+op2: register $s2
+op3: label abcxyz
+
+Please enter a MIPS statement: beq $s1, $s2, 10000000
+operator: beq
+ op1: register $s1
+ op2: register $s2
+ op3: Error: immediate op out of range
+
+Please enter a MIPS statement: addi $s1, $s2, $s3
+ operator: addi
+ op1: register $s1
+ op2: register $s2
+ op3: Error: immediate expected
